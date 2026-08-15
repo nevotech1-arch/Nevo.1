@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الدفع بفودافون كاش</title>
+
+<style>
+body{
+margin:0;
+font-family:Cairo,Tahoma,sans-serif;
+background:#e60000;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.card{
+background:#fff;
+padding:30px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.2);
+width:90%;
+max-width:420px;
+text-align:center;
+}
+
+h1{
+margin-top:0;
+color:#e60000;
+font-size:28px;
+}
+
+p{
+color:#666;
+margin-bottom:25px;
+}
+
+button{
+width:100%;
+padding:15px;
+margin:8px 0;
+border:none;
+border-radius:12px;
+font-size:18px;
+cursor:pointer;
+transition:.25s;
+font-weight:bold;
+}
+
+.copy{
+background:#f5f5f5;
+}
+
+.copy:hover{
+background:#e8e8e8;
+}
+
+.vf{
+background:#e60000;
+color:white;
+margin-top:18px;
+}
+
+.vf:hover{
+background:#c70000;
+}
+
+#msg{
+margin-top:15px;
+font-weight:bold;
+color:green;
+height:22px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>💳 الدفع بفودافون كاش</h1>
+
+<p>اختر الرقم الذي تريد نسخه ثم افتح تطبيق Vodafone Cash.</p>
+
+<button class="copy" onclick="copyNumber('01006624659',1)">📋 نسخ الرقم 1</button>
+
+<button class="copy" onclick="copyNumber('01017831418',2)">📋 نسخ الرقم 2</button>
+
+<button class="copy" onclick="copyNumber('01555285656',3)">📋 نسخ الرقم 3</button>
+
+<button class="copy" onclick="copyNumber('01220422858',4)">📋 نسخ الرقم 4</button>
+
+<button class="vf" onclick="openVF()">📱 فتح فودافون كاش</button>
+
+<div id="msg"></div>
+
+</div>
+
+<script>
+
+function copyNumber(num,index){
+
+navigator.clipboard.writeText(num);
+
+document.getElementById("msg").innerHTML=
+"✅ تم نسخ الرقم "+index;
+
+}
+
+function openVF(){
+
+window.location.href="vfcash://";
+
+setTimeout(function(){
+
+window.location.href="https://play.google.com/store/apps/details?id=com.emeint.android.myservices";
+
+},1500);
+
+}
+
+</script>
+
+</body>
+</html>
